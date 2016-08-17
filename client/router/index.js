@@ -9,6 +9,9 @@ import { createStore, setAsCurrentStore } from '../store';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
+const testing = () => {
+  return getMuiTheme();
+}
 
 export function run() {
   // init promise polyfill
@@ -21,11 +24,11 @@ export function run() {
   setAsCurrentStore(store);
 
   render(
-    <MuiThemeProvider muiTheme={getMuiTheme('lightBaseTheme')}>
-      <Provider store={store} >
+    <Provider store={store} >
+      <MuiThemeProvider muiTheme={testing()}>
         <Router history={browserHistory}>{createRoutes({store, first: { time: true }})}</Router>
-      </Provider>
-    </MuiThemeProvider>,
+      </MuiThemeProvider>
+    </Provider>,
     document.getElementById('app')
   );
 
