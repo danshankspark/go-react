@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import { Link } from 'react-router';
 import { example, p, link } from './styles';
+import LeNavBar from '../shared/nav';
 
 export default class Homepage extends Component {
   /*eslint-disable */
@@ -21,6 +22,7 @@ export default class Homepage extends Component {
             content: 'Golang Isomorphic React/Hot Reloadable/Redux/Css-Modules Starter Kit'
           }
         ]} />
+      <LeNavBar />
       <h1 className={example}>
         Hot Reloadable <br />
         Golang + React + Redux + Css-Modules

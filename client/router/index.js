@@ -6,6 +6,8 @@ import toString from './toString';
 import { Promise } from 'when';
 import createRoutes from './routes';
 import { createStore, setAsCurrentStore } from '../store';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 
 export function run() {
@@ -19,9 +21,11 @@ export function run() {
   setAsCurrentStore(store);
 
   render(
-    <Provider store={store} >
-      <Router history={browserHistory}>{createRoutes({store, first: { time: true }})}</Router>
-    </Provider>,
+    <MuiThemeProvider muiTheme={getMuiTheme('lightBaseTheme')}>
+      <Provider store={store} >
+        <Router history={browserHistory}>{createRoutes({store, first: { time: true }})}</Router>
+      </Provider>
+    </MuiThemeProvider>,
     document.getElementById('app')
   );
 

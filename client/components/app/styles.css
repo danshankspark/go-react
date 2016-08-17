@@ -1,4 +1,4 @@
-body {
+/*body {
   background-color: #f7f7f7;
   &:before {
     content: '';
@@ -14,4 +14,4 @@ body {
   padding: 0 px(100);
   text-align: center;
   width: 99%;
-}
+}*/
