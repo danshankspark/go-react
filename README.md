@@ -27,7 +27,7 @@ This project contains a quick starter kit for **Facebook React** Single Page App
 
 * [golang](https://golang.org/)
 * [node.js](https://nodejs.org/) with [npm](https://www.npmjs.com/), only to build the application bundle at compile time
-* [GNU make](https://www.gnu.org/software/make/)
+* [GNU make](https://www.gnu.org/software/make/) or [MinGW](www.mingw.org/) if you're on a Windows OS
 
 Note that probably not works at windows.
 
